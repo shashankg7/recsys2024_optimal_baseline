@@ -6,7 +6,6 @@ Anonymous source code for running the experiments for the RecSys 2024 full paper
 
 ## Disclaimer
 The codebase for reproducing the results from this paper builds on top of the Open Bandit Pipeline (https://github.com/st-tech/zr-obp). 
-However, we are not associated with the authors of the package.
 
 ## Reproducing the plots
 

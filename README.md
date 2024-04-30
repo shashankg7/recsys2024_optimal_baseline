@@ -15,6 +15,8 @@ We have included a Jupyter notebook (Paper Plots.ipynb) along with the temp. res
 
 We have included additional results from the Section 5.4 with empirical variance of different estimators for off-policy evaluation task (analogous to Figure 4 from the paper). 
 
+The results are present in the file "appendix/Evaluation_variance.pdf" in the current folder.
+
 
 Steps to run the code: 
 -----------------------

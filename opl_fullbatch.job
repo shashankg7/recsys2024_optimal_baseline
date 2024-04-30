@@ -1,0 +1,15 @@
+#!/bin/sh
+#SBATCH -o ./logs/%A_%a.out                     
+#SBATCH -e ./logs/%A_%a.err 
+#SBATCH --array=1-32%8
+#SBATCH --mem=128G
+#SBATCH --time=01:00:00
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:1
+source <path_to_conda.sh>
+conda activate ope
+
+
+echo "Starting task" $SLURM_ARRAY_TASK_ID
+
+CUDA_VISIBLE_DEVICES=0 python examples/opl/evaluate_off_policy_learners_fullbatch.py --n_rounds 250000 --optimizer adam --batch_size 128 --learning_rate 0.1 --random_state $SLURM_ARRAY_TASK_ID --epoch 500

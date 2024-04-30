@@ -1,0 +1,21 @@
+#!/bin/sh
+#SBATCH -o ./logs/%A_%a.out                     
+#SBATCH -e ./logs/%A_%a.err 
+#SBATCH --array=1-1000%50
+#SBATCH --mem=60G
+#SBATCH --time=05:00:00
+#SBATCH --partition=cpu
+#SBATCH --cpus-per-task=8
+source <path_to_conda.sh>
+conda activate ope
+HPARAMS_FILE=./examples/obd/conf/hyper_params.txt
+
+for i in {1..1}
+do
+    python examples/obd/evaluate_off_policy_estimators_synt_slurm.py $(head -$(expr $SLURM_ARRAY_TASK_ID + 0) $HPARAMS_FILE | tail -1) --beta 5 &
+    python examples/obd/evaluate_off_policy_estimators_synt_slurm.py $(head -$(expr $SLURM_ARRAY_TASK_ID + 0) $HPARAMS_FILE | tail -1) --beta -1 &
+    python examples/obd/evaluate_off_policy_estimators_synt_slurm.py $(head -$(expr $SLURM_ARRAY_TASK_ID + 0) $HPARAMS_FILE | tail -1) --beta -5 &
+    python examples/obd/evaluate_off_policy_estimators_synt_slurm.py $(head -$(expr $SLURM_ARRAY_TASK_ID + 0) $HPARAMS_FILE | tail -1) --beta 1 &
+done
+wait
+    

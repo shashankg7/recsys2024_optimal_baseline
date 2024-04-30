@@ -21,7 +21,7 @@ The results are present in the file "appendix/Evaluation_variance.pdf" in the cu
 Steps to run the code: 
 -----------------------
 
-1) Create a new conda envioronment and install the dependencies for the project via the requirements.txt file
+1) Create a new conda environment and install the dependencies for the project via the requirements.txt file
 
 ```
 conda create --name recsys_2024

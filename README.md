@@ -1,8 +1,8 @@
-# RecSys 2024 full paper submission id 92 Optimal Baseline Corrections for Off-Policy Contextual Bandits	
+# RecSys 2024 full paper Optimal Baseline Corrections for Off-Policy Contextual Bandits	
 
 ==============================
 
-Anonymous source code for running the experiments for the RecSys 2024 full paper submission number 92 titled, "Optimal Baseline Corrections for Off-Policy Contextual Bandits".
+Source code for running the experiments for the RecSys 2024 full paper titled, "Optimal Baseline Corrections for Off-Policy Contextual Bandits".
 
 ## Disclaimer
 The codebase for reproducing the results from the submission builds on top of the Open Bandit Pipeline (https://github.com/st-tech/zr-obp). 

@@ -69,7 +69,20 @@ python examples/opl/evaluate_off_policy_learners_fullbatch.py --n_rounds 250000 
 For OPE, update the paths in the ope.job file and launch the script, and for OPL experiments, first run 1) tune_banditnet.job, followed by: 2) opl.job (mini-batch), opl_fullbatch.job (full-batch).
 
 
+## Paper
+If you use our code in your research, please remember to cite our work:
 
+```BibTeX
+    @inproceedings{gupta-2024-optimal,
+      author = {Gupta, Shashank and Jeunen, Olivier and Oosterhuis, Harrie and de Rijke, Maarten},
+      booktitle = {RecSys 2024: 18th ACM Conference on Recommender Systems},
+      date-added = {2024-07-22 16:36:49 +0200},
+      date-modified = {2024-07-23 01:51:19 +0200},
+      month = {October},
+      publisher = {ACM},
+      title = {Optimal Baseline Corrections for Off-Policy Contextual Bandits},
+      year = {2024}}
+```
 
 
 
